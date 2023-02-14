@@ -13,4 +13,4 @@ jobs:
         run: yarn install
         
       - name: Run E2E tests
-        run: Yarn cypress run
+        run: yarn cypress run
