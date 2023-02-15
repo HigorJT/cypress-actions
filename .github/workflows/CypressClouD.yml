@@ -45,7 +45,7 @@ jobs:
           install-command: yarn install
           browser: chrome
           record: true
-          group: UI chrome
+          group: UI Chrome
           spec: ${{ github.event.inputs.spec}}
         env:
           CYPRESS_RECORD_KEY: c7d5da97-a903-4153-bc57-c8107eec2814
@@ -67,7 +67,7 @@ jobs:
           install-command: yarn install
           browser: edge
           record: true
-          group: UI edge
+          group: UI Edge
           spec: ${{ github.event.inputs.spec}}
         env:
           CYPRESS_RECORD_KEY: c7d5da97-a903-4153-bc57-c8107eec2814
