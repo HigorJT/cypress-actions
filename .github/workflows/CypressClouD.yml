@@ -52,7 +52,7 @@ jobs:
           GITHUB_TOKEN: ${{ SECRETS.GITHUB_TOKEN}}
           
   cypress-e2e-firefox:
-    needs: cypress-e2e-chrome
+    needs: cypress-e2e-electron
     runs-on: ubuntu-latest
     container: 
       image: cypress/browsers:node18.12.0-chrome107
@@ -67,7 +67,7 @@ jobs:
           install-command: yarn install
           browser: firefox
           record: true
-          group: UI firefox
+          group: UI Firefox
           spec: ${{ github.event.inputs.spec}}
         env:
           CYPRESS_RECORD_KEY: c7d5da97-a903-4153-bc57-c8107eec2814
