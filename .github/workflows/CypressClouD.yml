@@ -51,7 +51,7 @@ jobs:
           CYPRESS_RECORD_KEY: c7d5da97-a903-4153-bc57-c8107eec2814
           GITHUB_TOKEN: ${{ SECRETS.GITHUB_TOKEN}}
           
-  cypress-e2e-firefox:
+  cypress-e2e-edge:
     needs: cypress-e2e-electron
     runs-on: ubuntu-latest
     container: 
@@ -65,9 +65,9 @@ jobs:
         uses: cypress-io/github-action@v5.0.9
         with:
           install-command: yarn install
-          browser: firefox
+          browser: edge
           record: true
-          group: UI Firefox
+          group: UI edge
           spec: ${{ github.event.inputs.spec}}
         env:
           CYPRESS_RECORD_KEY: c7d5da97-a903-4153-bc57-c8107eec2814
