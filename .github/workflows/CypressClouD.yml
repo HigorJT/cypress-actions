@@ -23,7 +23,7 @@ jobs:
           install-command: yarn install
           browser: electron
           record: true
-          group: UI Electron
+          group: UI electron
           spec: ${{ github.event.inputs.spec}}
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY}}
@@ -45,7 +45,7 @@ jobs:
           install-command: yarn install
           browser: chrome
           record: true
-          group: UI Chrome
+          group: UI chrome
           spec: ${{ github.event.inputs.spec}}
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY}}
@@ -67,7 +67,7 @@ jobs:
           install-command: yarn install
           browser: firefox
           record: true
-          group: UI Firefox
+          group: UI firefox
           spec: ${{ github.event.inputs.spec}}
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY}}
